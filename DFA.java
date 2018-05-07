@@ -5,16 +5,9 @@
  */
 
 import java.util.LinkedHashSet;
-import java.util.LinkedList;
 import java.util.Set;
 
-//import NFA.State;
-
-
 public class DFA extends NFA {
-    //private LinkedList<State> dfa;
-   //protected State start;e
-   // protected State stop;
 
     public DFA () {
       super();
@@ -43,7 +36,7 @@ public class DFA extends NFA {
             return;
         }
         visited.add(p.stateNumber);
-        for (NFA.Edge e: p.edges) {
+        for (DFA.Edge e: p.edges) {
             if (e.label == DFA.FAIL){
                 break;
             } else {
